@@ -1,26 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <router-view/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  // Opcional: Nombre del componente principal
+  name: 'App' 
 }
 </script>
 
 <style>
+/* Elimina o comenta cualquier estilo global innecesario que Vue CLI pueda haber añadido,
+   como tipografías o centrados que interfieran con Bootstrap. */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  /* Ya no necesitas centrar el texto aquí, Bootstrap lo manejará */
 }
 </style>
