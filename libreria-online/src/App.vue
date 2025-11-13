@@ -1,21 +1,20 @@
 <template>
-  <router-view/>
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
 <script>
 export default {
-  // Opcional: Nombre del componente principal
-  name: 'App' 
+  name: 'App'
 }
 </script>
 
-<style>
-/* Elimina o comenta cualquier estilo global innecesario que Vue CLI pueda haber añadido,
-   como tipografías o centrados que interfieran con Bootstrap. */
+<style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Ya no necesitas centrar el texto aquí, Bootstrap lo manejará */
+  min-height: 100vh;
 }
 </style>
