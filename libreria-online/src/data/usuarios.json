@@ -2,15 +2,15 @@
   "usuarios": [
     {
       "id": 1,
-      "username": "admin",
-      "password": "admin123",
+      "username": "Kevin",
+      "password": "jarrita",
       "nombre": "Administrador",
       "rol": "administrador"
     },
     {
       "id": 2,
-      "username": "vendedor",
-      "password": "vend123",
+      "username": "Juan",
+      "password": "1234",
       "nombre": "Vendedor Principal",
       "rol": "vendedor"
     }
