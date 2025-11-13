@@ -1,9 +1,15 @@
+// src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../views/LoginView.vue'
 import DashboardView from '../views/DashboardView.vue'
-import BookView from '../views/BookView.vue' // Vista para CRUD de Libros
+import ProductView from '../views/ProductView.vue'
+import ClientsView from '../views/ClientsView.vue'
 
 const routes = [
+  {
+    path: '/',
+    redirect: '/login'
+  },
   {
     path: '/login',
     name: 'Login',
@@ -13,26 +19,42 @@ const routes = [
     path: '/dashboard',
     name: 'Dashboard',
     component: DashboardView,
-    // Rutas hijas que mantienen el Sidebar y Navbar visibles
     children: [
-        {
-            path: 'libros', // Ruta final: /dashboard/libros
-            name: 'Books',
-            component: BookView 
-        },
-        // Aquí podrías agregar otras rutas: 'clientes', 'prestamos', etc.
+      {
+        path: '',
+        redirect: '/dashboard/productos'
+      },
+      {
+        path: 'productos',
+        name: 'Productos',
+        component: ProductView
+      },
+      {
+        path: 'clientes',
+        name: 'Clientes',
+        component: ClientsView
+      }
     ]
-  },
-  // Redirección por defecto
-  {
-    path: '/',
-    redirect: '/login'
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+// Guard de navegación para proteger rutas
+router.beforeEach((to, from, next) => {
+  const isAuthenticated = localStorage.getItem('isAuthenticated')
+  
+  // Si intenta ir al dashboard sin estar autenticado
+  if (to.path.includes('/dashboard') && !isAuthenticated) {
+    next('/login')
+  } 
+  // Si está en login y está autenticado, permitir estar en login también
+  else {
+    next()
+  }
 })
 
 export default router
