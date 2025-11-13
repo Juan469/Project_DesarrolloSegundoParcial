@@ -1,10 +1,13 @@
+// src/main.js
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-// 🎨 Importar Bootstrap CSS (Requerimiento de diseño)
-import 'bootstrap/dist/css/bootstrap.css' 
-// Importar Bootstrap JS (necesario para modales, etc.)
-import 'bootstrap/dist/js/bootstrap.bundle.min.js' 
+// Importar Bootstrap CSS y JS
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+
+// Importar Bootstrap Icons
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 createApp(App).use(router).mount('#app')
