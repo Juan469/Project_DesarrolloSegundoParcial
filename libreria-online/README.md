@@ -1,9 +1,7 @@
 # 📚 Librería Virtual - Sistema de Gestión de Inventario
 
-![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D?logo=vue.js&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?logo=bootstrap&logoColor=white)
-![Estado](https://img.shields.io/badge/Estado-Educativo-yellow)
-![Licencia](https://img.shields.io/badge/Licencia-MIT-blue)
+Juan José Quintero Sánchez-192456
+Kevin Otero -192537
 
 > **⚠️ PROYECTO EDUCATIVO**  
 > Este proyecto fue desarrollado con fines académicos para el curso de Desarrollo de Aplicaciones Web. La autenticación y gestión de datos son simuladas y **NO deben usarse en producción**.
